@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/f1e25f447d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo1a.png" class="logo3a" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">PortFolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Software Developer</p>
+          <h1>Hi, I'm <span>Shivam</span></h1>
+        </div>
+      </div>
+    </div>
+    <!-- About section -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/logo2a.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Final year computer science student with a knack for problem-solving and innovation. Demonstrates exceptional leadership and teamwork, leading to achievements in competitive events and sports. Proficient in various programming languages and technologies, with a proven track record of successfully completing projects that enhance user experience and efficiency in different domains. Adept at leveraging technology to address real-world challenges and constantly seeking opportunities to learn and grow.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>Reactjs, Nodejs, JavaScript, PHP, HTML, CSS</li>
+                    <li><span>Programming</span><br>Java, C++, DSA </li>
+                    <li><span>Core</span><br>DBMS, Computer Netwok, Operating System</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Graduation</span><br>LPU - 7.92</li>
+                    <li><span>12th </span><br>Kendriya Vidyalaya  - 75.8</li>
+                    <li><span>10th</span><br>Shiv Jyoti Sen. Sec. School  - 9.4</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PortFolio section  -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/imbd.png">
+                    <div class="layer">
+                        <h3>Movie Searching App</h3>
+                        <p>A React-based movie search website fetching data from IMDB API. Discover films easily with ratings, summaries, and more. Efficient, user-friendly, and perfect for any cinephile's portfolio.</p>
+                        <a href="https://github.com/shivas45/imbd"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/News.png">
+                    <div class="layer">
+                        <h3>News Application</h3>
+                        <p>React-based news app delivers daily updates via news API. Features useState and useReducer hooks for optimized performance and user experience.</p>
+                        <a href="https://github.com/shivas45/NewsApplication"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/hospital.png">
+                    <div class="layer">
+                        <h3>Hospital Managemet System</h3>
+                        <p>Hospital Management System in HTML, CSS, JS. Multi-page app displays doctor details, patient feedback, and appointment booking form for seamless operations.</p>
+                        <a href="https://github.com/shivas45/Hospital-Managemet-System"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/shivas45?tab=repositories" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>shivamkr5646@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+917765092460</p>
+                <div class="social-icons">
+                    <a href="www.linkedin.com/in/shivamgupta45a906b202"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/shivas45"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/shivoham.45/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://leetcode.com/Shiv_45/"><img class="leetcode-icon" src="images/leet.png" alt="LeetCode"></a>
+                </div>
+                <a href="images/shivamcv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Enter your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form> 
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="copyright">
+          <p>Copyright @ Shivam.</p>
+        </div> -->
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu(){
+        sidemenu.style.right = "0";
+
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+        
+      }
+    </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwDI6c-ya40tQP4RZZriU8dXgnw2JiUZ1h8u5P3Vmg5E-HgHl5vnVAAmMeeTs9-PeeGFQ/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+              msg.innerHTML = "";
+            },2000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+
+</html>
