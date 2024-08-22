@@ -323,7 +323,7 @@ nav .fas{
 }
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/logo4a.png);
+        background-image: url(images/back.png);
 
     }
     .header-text{
